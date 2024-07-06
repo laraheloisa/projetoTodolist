@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="cabeçalho">
+            <div id="img-logo">
+            <img src="Logo.png" alt="logo">
+            </div>
+        </div>
+        <div class="container-filho">
+            <input type="text" id="input" placeholder="Adicione uma nova tarefa">
+            <button id="btnCriaTarefa">Criar<i class="material-icons">add_circle</i></button>
+        </div>
+
+        <div class="processo">
+            <div class="criadas">
+                <h3>Tarefas Criadas</h3>
+                <div id="tarefasCriadas">0</div>
+
+            </div>
+            <div class="concluídas">
+                <h3>Tarefas Concluídas</h3>
+                <div id="tarefasConcluídas">0</div>
+
+            </div>
+        </div>
+        <hr id="linha">
+        <ul id="listadeTarefas">
+            <li class="task" id="+tarefa+">
+                <div>
+                    <button class="btnAcao" onclick="uncheck(`+tarefa+`)">
+                        <i class="material-icons" id="check`+tarefa+`">circle</i>
+                    </button>
+                </div>
+                <div class="nomeTarefaCriada"></div>
+                <div>
+                    <button class="btnDelete" onclick="apagarTarefa('`+tarefa+`')">
+                        <i class="material-icons">delete_forever</i>
+                    </button>
+                </div>
+            </li> 
+        </ul>
+        <div class="container-filho2">
+            <div>
+                <img src="Clipboard.png" alt="img" id="clipboard-img">
+            </div>
+            <div id="texto1">Você ainda não tem tarefas cadastradas</div>
+            <div id="texto2">Crie tarefas e organize seus itens a fazer</div>
+    </div>
+    </div>
+</body>
+</html>
